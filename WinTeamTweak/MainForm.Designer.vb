@@ -174,14 +174,21 @@ Partial Class MainForm
         '
         'LinkLabel1
         '
+        Me.LinkLabel1.ActiveLinkColor = System.Drawing.Color.Black
         Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.LinkLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.LinkLabel1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.LinkLabel1.Font = New System.Drawing.Font("微软雅黑", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
         Me.LinkLabel1.Location = New System.Drawing.Point(288, 115)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(21, 25)
+        Me.LinkLabel1.Size = New System.Drawing.Size(35, 27)
         Me.LinkLabel1.TabIndex = 2
         Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "?"
+        Me.LinkLabel1.Text = " ? "
+        Me.LinkLabel1.VisitedLinkColor = System.Drawing.Color.Black
         '
         'Button11
         '

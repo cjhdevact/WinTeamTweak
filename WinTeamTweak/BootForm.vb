@@ -42,6 +42,12 @@
             RegForm.CheckBox8.Checked = False
             RegForm.CheckBox8.Enabled = False
         End If
+
+        If MainForm.CheckBox1.Checked = True Then
+            MainForm.NSPath = """" & Application.StartupPath & "\" & MainForm.NSudoName & """ -Wait -U:T -P:E "
+        Else
+            MainForm.NSPath = ""
+        End If
         '第一次运行需要提升权限，提升后获取的是提升权限的用户名
         'TextBox1.Text = System.Environment.UserName
         Dim cursysarch As String
