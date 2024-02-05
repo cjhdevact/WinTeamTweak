@@ -36,7 +36,8 @@
     Private Sub MainForm_FormClosing(ByVal sender As System.Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles MyBase.FormClosing
         e.Cancel = True
             Try
-            Shell(NSPath & "cmd.exe /c taskkill.exe /f /im """ & Application.StartupPath & "\" & NSudoName & """", AppWinStyle.Hide, True)
+            Shell(NSPath & "cmd.exe /c taskkill.exe /f /im """ & NSudoName & """", AppWinStyle.Hide, True)
+            Shell("cmd.exe /c taskkill.exe /f /im """ & NSudoName & """", AppWinStyle.Hide, True)
             System.IO.File.Delete(Application.StartupPath & "\" & NSudoName)
             Catch ex As Exception
                 MessageBox.Show("删除临时文件 " & Application.StartupPath & "\" & NSudoName & " 时发生错误。" & vbCrLf & ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
@@ -382,6 +383,14 @@
             Catch ex As Exception
                 MessageBox.Show(ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
+        End If
+    End Sub
+
+    Private Sub CheckBox8_CheckedChanged(sender As System.Object, e As System.EventArgs) Handles CheckBox8.CheckedChanged
+        If CheckBox8.Checked = True Then
+            Me.TopMost = True
+        Else
+            Me.TopMost = False
         End If
     End Sub
 End Class

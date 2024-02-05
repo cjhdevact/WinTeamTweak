@@ -15,7 +15,8 @@
         If noe = 0 Then
             e.Cancel = True
             Try
-                Shell(MainForm.NSPath & "cmd.exe /c taskkill.exe /f /im """ & Application.StartupPath & "\" & MainForm.NSudoName & """", AppWinStyle.Hide, True)
+                Shell(MainForm.NSPath & "cmd.exe /c taskkill.exe /f /im """ & MainForm.NSudoName & """", AppWinStyle.Hide, True)
+                Shell("cmd.exe /c taskkill.exe /f /im """ & MainForm.NSudoName & """", AppWinStyle.Hide, True)
                 System.IO.File.Delete(Application.StartupPath & "\" & MainForm.NSudoName)
             Catch ex As Exception
                 MessageBox.Show("删除临时文件 " & Application.StartupPath & "\" & MainForm.NSudoName & " 时发生错误。" & vbCrLf & ex.Message, "错误", MessageBoxButtons.OK, MessageBoxIcon.Error)

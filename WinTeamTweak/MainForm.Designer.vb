@@ -54,6 +54,7 @@ Partial Class MainForm
         Me.Button20 = New System.Windows.Forms.Button()
         Me.Button21 = New System.Windows.Forms.Button()
         Me.Button22 = New System.Windows.Forms.Button()
+        Me.CheckBox8 = New System.Windows.Forms.CheckBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -373,12 +374,25 @@ Partial Class MainForm
         Me.Button22.Text = "恢复默认策略"
         Me.Button22.UseVisualStyleBackColor = True
         '
+        'CheckBox8
+        '
+        Me.CheckBox8.AutoSize = True
+        Me.CheckBox8.Checked = True
+        Me.CheckBox8.CheckState = System.Windows.Forms.CheckState.Checked
+        Me.CheckBox8.Location = New System.Drawing.Point(409, 60)
+        Me.CheckBox8.Name = "CheckBox8"
+        Me.CheckBox8.Size = New System.Drawing.Size(93, 25)
+        Me.CheckBox8.TabIndex = 30
+        Me.CheckBox8.Text = "始终顶置"
+        Me.CheckBox8.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(96.0!, 96.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi
         Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(622, 580)
+        Me.Controls.Add(Me.CheckBox8)
         Me.Controls.Add(Me.Button22)
         Me.Controls.Add(Me.Button21)
         Me.Controls.Add(Me.Button20)
@@ -439,4 +453,5 @@ Partial Class MainForm
     Friend WithEvents Button21 As System.Windows.Forms.Button
     Friend WithEvents Button22 As System.Windows.Forms.Button
     Friend WithEvents Button23 As System.Windows.Forms.Button
+    Friend WithEvents CheckBox8 As System.Windows.Forms.CheckBox
 End Class
